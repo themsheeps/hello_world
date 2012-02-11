@@ -1,0 +1,90 @@
+// Place all the styles related to the Say controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*
+{
+padding: 0em;
+margin: 0em;
+}
+
+div.maincontent {
+	background: white;
+	padding: 35px 35px 35px 35px;
+	padding-top: 1.3em;
+}
+
+body
+{
+background: #090915 url('/images/bgtop.jpg');
+background-repeat: repeat-x;
+padding: 35px 0px 35px 0px;
+}
+
+body,input
+{
+font-size: 10pt;
+font-family: "georgia", "times new roman", serif;
+color: #333333;
+}
+
+p
+{
+line-height: 1.5em;
+margin-bottom: 1.0em;
+text-align: justify;
+}
+
+h3 span
+{
+font-weight: normal;
+}
+
+h3,h4
+{
+display: inline;
+font-weight: bold;
+background-repeat: no-repeat;
+background-position: right;
+}
+
+img
+{
+border: solid 1px #6F5230;
+}
+
+img.left
+{
+position: relative;
+float: left;
+margin: 0em 1.8em 1.4em 0em;
+}
+
+img.right
+{
+position: relative;
+float: right;
+margin: 0em 0em 1.8em 1.8em;
+}
+
+.center
+{
+margin-left:auto;
+margin-right:auto;
+}
+
+.borderless
+{
+border: 0px;
+}
+
+.outer
+{
+z-index: 2;
+position: relative;
+width: 82%;
+max-width: 950px;
+border: solid 7px #fff;
+background-color: #fff;
+margin: 0 auto;
+}
+
