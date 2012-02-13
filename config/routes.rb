@@ -4,6 +4,8 @@ HelloWorld::Application.routes.draw do
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
+  match 'say/hello' => 'say#hello'
+  match 'say/error_500' => 'say#error_500'
   match 'say/:id' => 'say#hello'
   # Keep in mind you can assign values other than :controller and :action
 
@@ -51,10 +53,15 @@ HelloWorld::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   root :to => 'say#hello'
+  #unless Rails.application.config.consider_all_requests_local
+  match "error/serve500"
+  match '*not_found', to: 'error#serve404'
+  #end
+  
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  # match '*' => 'error/serve404'
 end
