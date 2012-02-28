@@ -24,9 +24,54 @@
 			</p>
 			<hr />
 			<h1>Cause Some Havoc</h1>
-			<a href="/say/error_500" />Trigger Error 500 - by causing a DivideByZero Exception</a><br />
+			<p>
+            <a href="/say/error_500" />Trigger Error 500 - by causing a DivideByZero Exception</a><br />
 			<a href="/kwagga" />Trigger error 404 - by linking to /kwagga</a>
-			</div>
+            </p>
+
+            <br />
+
+            <h1>Check Out These Cars</h1>
+              <% if @cars.blank? %>
+                  <p>There are not any cars currently in the system.</p>
+              <% else %>
+                  <table>
+                    <thead>
+                        <th>Make</th>
+                        <th>Model</th>
+                    </thead>
+                    <% @cars.each do |c| %>
+                        <tr>
+                            <td><%= c.makes -%></td>
+                            <td><%= c.models -%></td>
+                        </tr>
+                    <% end %>
+                  </table>
+              <% end %>
+
+              <br />
+
+              <h1>Check Out These Dealers</h1>
+              <% if @car_dealerships.blank? %>
+                  <p>There are not any dealers currently in the system.</p>
+              <% else %>
+                  <table>
+                    <thead>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Telephone Number</th>
+                    </thead>
+                    <% @car_dealerships.each do |d| %>
+                        <tr>
+                          <td><%= d.names -%></td>
+                          <td><%= d.contacts -%></td>
+                          <td><%= d.telephone_numbers -%></td>
+                        </tr>
+                    <% end %>
+                  </table>
+              <% end %>
+
+            </div>
 		</div>
 	</body>
 </html>
